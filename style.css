@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2? family = Open + Sans: wght @ 300; 400; 600; 700 & display = swap");
+
+/* RESET PAGE */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  --black: #0f241d;
+  --button-background: #319774;
+  --green: #69b99d;
+  --green-ligth: #ccf4e6;
+  --white: #f9f9f9;
+  --white-2: #ffffff;
+}
+
+body {
+  font: 400 1rem "Roboto", sans-serif;
+  color: var(--black);
+  background-color: var(--white-2);
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.container {
+  width: 90%;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.section {
+  padding: 5rem 0;
+}
+
+.divider-1 {
+  height: 1px;
+  background: linear-gradient(270deg, var(--green), var(--green-ligth));
+}
+
+/* FIM RESET */
+
+/* INICIO HEADER */
+
+#header {
+  border-bottom: 1px solid #e4e4e4;
+  display: flex;
+
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  background: var(--white-2);
+}
+
+nav {
+  height: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.logo span {
+  color: var(--green);
+}
+
+/* FIM HEADER */
+
+/* INICIO MAIN */
+
+main{
+    margin-top: 4.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+#home {
+  overflow: hidden;
+}
+
+#home .container {
+  margin: 0;
+}
+
+#home .image {
+  position: relative;
+}
+
+#home .image::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: var(--green-ligth);
+  position: absolute;
+  top: -12.8%;
+  left: 16.8%;
+  z-index: 0;
+}
+
+#home .image img,
+#home .image::before {
+  border-radius: 0.2rem;
+}
+
+#home .image img {
+  position: relative;
+  right: 2.93rem;
+}
+
+#home .text {
+  margin: 1.5rem 1.5rem 0 1.5rem;
+  text-align: center;
+}
+
+#home .text h1 {
+  margin-bottom: 1rem;
+}
+
+#home .text p {
+  margin-bottom: 2rem;
+}
+
+#home .text .button {
+  background: var(--green);
+  color: var(--white);
+  height: 3.5rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 2rem;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+#home .text .button:hover {
+  background: var(--button-background);
+}
