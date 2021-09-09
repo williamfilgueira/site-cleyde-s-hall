@@ -109,6 +109,10 @@ body {
   color: var(--green);
 }
 
+.logo-alt span {
+  color: var(--white-2);
+}
+
 /* NAVIGATION &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
 nav {
   height: 4.5rem;
@@ -219,6 +223,9 @@ main {
 .grid {
   display: grid;
   gap: 1.5rem;
+  align-items: center;
+  margin: 0 auto;
+
 }
 
 #home {
@@ -226,7 +233,8 @@ main {
 }
 
 #home .container {
-  margin: 0;
+  margin: 0 auto;
+
 }
 
 #home .image {
@@ -290,7 +298,7 @@ main {
 }
 
 #about .container {
-  margin: 0;
+  margin: 0 auto;
 }
 
 #about .image {
@@ -370,8 +378,8 @@ main {
 }
 
 #testimonials .container {
-  margin-left: 0;
-  margin-right: 0;
+  margin: 0 auto;
+ 
 }
 
 #testimonials header {
@@ -417,7 +425,6 @@ main {
 
 /* SWIPER &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
 
-
 .swiper-slide {
   height: auto;
   padding: 1rem 1rem;
@@ -434,6 +441,10 @@ main {
 
 /* CONTACT &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
 
+#contact {
+  background: var(--white);
+}
+
 #contact .grid {
   gap: 4rem;
 }
@@ -442,13 +453,24 @@ main {
   margin-bottom: 2rem;
 }
 
+#contact .text {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 #contact .button {
   background: var(--button-background);
   padding: 1rem;
   display: inline-flex;
+  text-align: center;
   align-items: center;
   color: var(--white);
   transition: 0.2s;
+}
+
+#contact a {
+  background: red;
 }
 
 #contact .button:hover {
@@ -461,6 +483,14 @@ main {
   margin-right: 0.625rem;
 }
 
+#contact .links ul{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+  flex: 1 1 6.5rem;
+}
+
 #contact ul.grid {
   gap: 1.3rem;
 }
@@ -468,3 +498,69 @@ main {
 #contact ul li i {
   color: var(--green);
 }
+
+/* FOOTER &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+
+footer {
+  background: var(--green);
+}
+
+footer .logo {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+footer .brand {
+  color: var(--white-2);
+  margin-bottom: 0.75rem;
+}
+
+footer i {
+  font-size: 1.5rem;
+  color: var(--white-2);
+}
+
+footer .social {
+  display: flex;
+  gap: 2rem;
+}
+
+footer .social a{
+  display: inline-block;
+  transition: 0.3s;
+}
+
+footer .social a:hover{
+  transform: translateY(-10px);
+}
+
+.back-to-top {
+  background: var(--button-background);
+  color: var(--white-2);
+  display: flex;
+
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+
+  padding: 0.5rem;
+  clip-path: circle();
+
+  font-size: 2rem;
+
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+  transform: translateY(100%);
+}
+.back-to-top.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* RESPONSIVIDADE  &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
+
+/* @media (min-width:992px) {
+
+} */

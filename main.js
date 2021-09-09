@@ -21,33 +21,50 @@ for (const link of links) {
 
 // MUDAR O HEADER DA PAGIGA QUANDO SCROLLAR A PAGE
 
-const header = document.querySelector("#header");
-const navHeight = header.offsetHeight;
-
-window.addEventListener("scroll", () => {
+function changeHeaderWhenScroll(){
+  
+  const header = document.querySelector("#header");
+  const navHeight = header.offsetHeight;
+  
   if (window.scrollY >= navHeight) {
     header.classList.add("scroll");
   } else {
     header.classList.remove("scroll");
   }
+}
+
+function backToTopButton(){
+  const backToTopButton = document.querySelector('.back-to-top');
+  if (window.scrollY >= 600) {
+    backToTopButton.classList.add('show');
+  } else {
+    backToTopButton.classList.remove('show');
+  }
+
+}
+
+
+window.addEventListener("scroll", () => {
+  changeHeaderWhenScroll()
+  backToTopButton()
 });
 
 // CARROSEL SWIPER
 
 const swiper = new Swiper(".swiper-container", {
-    slidesPerView: 1,
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets'
+  slidesPerView: 1,
+  pagination: {
+    el: ".swiper-pagination",
+    type: "bullets",
+  },
+  mousewheel: true,
+  keyboard: true,
+  breakpoints: {
+    767: {
+      slidesPerView: 1,
+      setWrapperSize: true,
     },
-    mousewheel: true,
-    keyboard: true,
-    breakpoints: {
-      767: {
-        slidesPerView: 1,
-        setWrapperSize: true
-      }
-    }
+  },
 });
 
 // SCROOL REVIEW
@@ -61,6 +78,10 @@ const scrollReveal = ScrollReveal({
 
 scrollReveal.reveal(
   `#home .text, #home .image, #about .image, #about .text, #services header, #services .card, #testemonial header, #testemonial .testemonial,
-  #contact .text, #contact .links`,
+  #contact .text, #contact .links, footer .social`,
   { interval: 100 }
 );
+
+
+
+
