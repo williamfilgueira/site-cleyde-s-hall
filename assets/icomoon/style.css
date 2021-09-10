@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?ussos7');
-  src:  url('fonts/icomoon.eot?ussos7#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?ussos7') format('truetype'),
-    url('fonts/icomoon.woff?ussos7') format('woff'),
-    url('fonts/icomoon.svg?ussos7#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?qf7lz4');
+  src:  url('fonts/icomoon.eot?qf7lz4#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?qf7lz4') format('truetype'),
+    url('fonts/icomoon.woff?qf7lz4') format('woff'),
+    url('fonts/icomoon.svg?qf7lz4#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -65,5 +65,20 @@
   content: "\e90d";
 }
 .icon-phone:before {
+  content: "\e90e";
+}
+.icon-droplet:before {
   content: "\e90c";
+}
+.icon-coin-dollar:before {
+  content: "\e93b";
+}
+.icon-credit-card:before {
+  content: "\e93f";
+}
+.icon-spinner10:before {
+  content: "\e983";
+}
+.icon-fire:before {
+  content: "\e9a9";
 }
